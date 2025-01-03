@@ -60,9 +60,11 @@ npm install headless-formik-helper
       import {useRecoilState} from "recoil";
       import {globalLoadingState} from "@/recoil/common";
       import {useIsFirstRender} from "@/hooks/useIsFirstRender";
-      import {useHeadlessFormikHelper} from "@/hooks/headless-formik-helper/useHeadlessFormikHelper";
-      import {CreateOrUpdateMode} from "@/hooks/headless-formik-helper/types";
-    
+      
+      // 0. Import : headless-formik-helper
+      import {useHeadlessFormikHelper} from "headless-formik-helper";
+      import {CreateOrUpdateMode} from "headless-formik-helper/dist/types";
+      
       const ProductManagement = ({ PK_NAME }: { PK_NAME: string }) => {
           const searchParams = useSearchParams();
           const idForUpdate: number | null = Number(searchParams.get(PK_NAME));
