@@ -4,15 +4,22 @@
 
 ## Table of Contents
 - [Features](#features)
+- [Usage](#Usage)
 - [Sample Codes](#sample-codes)
 
 ## Features
 
-1. ** Show headless Formik examples using useFormik combined with Yup ** 
-2. ** Eager validation for all inputs **
-3. ** Functions for updating key-value pairs **
-4. ** Normalization of Formik values before sending them to the server **
-5. ... More features will be added over time
+- Show headless Formik examples using useFormik combined with Yup
+- Eager validation for all inputs
+- Functions for updating key-value pairs
+- Normalization of Formik values before sending them to the server
+- ...More features will be added over time
+
+## Usage
+- Registered in NPM
+```shell
+npm install headless-formik-helper
+```
 
 ## Sample Codes
 

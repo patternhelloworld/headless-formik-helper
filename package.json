@@ -1,7 +1,7 @@
 {
   "name": "headless-formik-helper",
   "description": "A Clean and Useful Helper Hook for useFormik",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "author": "Andrew Kang <studypurpose@naver.com>",
   "contributors": [
@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/patternhelloworld/headless-formik-helper.git"
   },
-  "homepage": "https://formik.org",
   "keywords": [
     "formik",
     "headless",
