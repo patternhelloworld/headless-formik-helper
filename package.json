@@ -1,0 +1,73 @@
+{
+  "name": "headless-formik-helper",
+  "description": "A Clean and Useful Helper Hook for useFormik",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Andrew Kang <studypurpose@naver.com>",
+  "contributors": [
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patternhelloworld/headless-formik-helper.git"
+  },
+  "homepage": "https://formik.org",
+  "keywords": [
+    "formik",
+    "headless",
+    "formik helper",
+    "react",
+    "react-dom",
+    "hooks",
+    "react hooks",
+    "validation",
+    "render props",
+    "validation"
+  ],
+  "main": "dist/index.js",
+  "umd:main": "dist/headless-formik-helper.umd.production.js",
+  "module": "dist/headless-formik-helper.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "test": "tsdx test --env=jsdom",
+    "test:watch": "npm run test -- --watchAll",
+    "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",
+    "build": "tsdx build --tsconfig tsconfig.build.json",
+    "lint": "tsdx lint"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "formik": "^2.4.6"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@types/lodash": "^4.14.119",
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
+    "@types/warning": "^3.0.0",
+    "just-debounce-it": "^1.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsdx": "^0.14.1",
+    "typescript": "^4.0.3",
+    "yup": "^0.32.0"
+  },
+  "jest": {
+    "globals": {
+      "__DEV__": "boolean"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setupTests.ts"
+    ]
+  }
+}
