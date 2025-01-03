@@ -6,6 +6,7 @@
 - [Features](#features)
 - [Usage](#Usage)
 - [Sample Codes](#sample-codes)
+- [APIs](#apis)
 
 ## Features
 
@@ -363,4 +364,105 @@ npm install headless-formik-helper
           createdAt: undefined,
           updatedAt: undefined,
       };
-    ```  
+    ```
+
+## APIs
+
+The `headless-formik-helper` library provides the following utilities to enhance the functionality of Formik forms:
+
+### 1. **onKeyValueChangeByNameValue**
+Updates a specific field in Formik using its name and a new value.
+
+**Signature:**
+```typescript
+({
+  name,
+  value,
+}: {
+  name: keyof T & string;
+  value: any;
+}) => void;
+```
+
+### 2. **onKeyValueChangeByNameIndexFieldValueMemoized**
+Handles updates for complex structures like arrays or objects with nested fields. Supports actions like adding or removing items.
+
+**Signature:**
+```typescript
+({
+  name,
+  index,
+  field,
+  value,
+  action,
+  newItem,
+}: {
+  name: keyof T & string;
+  index?: number;
+  field?: string;
+  value?: any;
+  action?: 'add' | 'remove';
+  newItem?: any;
+}) => void;
+```
+
+### 3. **normalizeFormikValues**
+Normalizes Formik values before sending them to the server, ensuring compliance with backend requirements.
+
+**Signature:**
+```typescript
+<T extends Record<string, any>>(obj: T) => T;
+```
+
+### 4. **onKeyValueChangeByNameIndexFieldTouchedMemoized**
+Marks a specific field in a nested structure as "touched" based on its name, index, and field name.
+
+**Signature:**
+```typescript
+({
+  name,
+  index,
+  field,
+}: {
+  name: keyof T & string;
+  index: number;
+  field: string;
+}) => void;
+```
+
+### 5. **onKeyValueChangeByEvent**
+Handles changes in Formik fields triggered by standard React change events (e.g., `<input>`).
+
+**Signature:**
+```typescript
+(e: React.ChangeEvent<HTMLInputElement>) => void;
+```
+
+### 6. **onKeyValueChangeByNameValueMemoized**
+A memoized version of `onKeyValueChangeByNameValue` for optimizing updates to Formik fields.
+
+**Signature:**
+```typescript
+({
+  name,
+  value,
+}: KeyValueChangeByNameValueMemoized<T>) => void;
+```
+
+### 7. **formikValuesChanged**
+Indicates whether Formik values have changed from their initial state.
+
+**Signature:**
+```typescript
+T | boolean;
+```
+
+### 8. **onKeyValueChangeByEventMemoized**
+A memoized version of `onKeyValueChangeByEvent` for efficiently handling React change events.
+
+**Signature:**
+```typescript
+(e: React.ChangeEvent<HTMLInputElement>) => void;
+```
+
+---
